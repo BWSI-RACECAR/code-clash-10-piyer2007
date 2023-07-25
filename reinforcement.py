@@ -59,8 +59,8 @@ class Solution:
                 for j in range(num_actions):
                     tup.append((j, i))
             for i in range(num_action**num_players):
-                dict.append(vals[i]:tup[i])
-                dict.append(tup[i]:vals[i])
+                dict[vals[i]] = tup[i]
+                dict[tup[i]] = vals[i]
 
             return dict
             pass
