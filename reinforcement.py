@@ -54,10 +54,10 @@ class Solution:
             tup = ()
             vals = ()
             for i in range(num_actions**num_players):
-                vals.append(i)
+                vals+=(i)
             for i in range(num_actions):
                 for j in range(num_actions):
-                    tup.append((j, i))
+                    tup+=((j, i))
             for i in range(num_action**num_players):
                 dict[vals[i]] = tup[i]
                 dict[tup[i]] = vals[i]
