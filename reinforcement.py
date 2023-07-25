@@ -53,7 +53,7 @@ class Solution:
             dict = {}
             tup = ()
             vals = ()
-            for i in range(num_action**num_players):
+            for i in range(num_actions**num_players):
                 vals.append(i)
             for i in range(num_actions):
                 for j in range(num_actions):
