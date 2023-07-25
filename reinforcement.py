@@ -55,7 +55,7 @@ class Solution:
             for i in range(num_actions):
                 for j in range(num_actions):
                     tup+=((j, i))
-            for i in range(num_action**num_players):
+            for i in range(num_actions**num_players):
                 dict[i] = tup[i]
                 dict[tup[i]] = i
 
