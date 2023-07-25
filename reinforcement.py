@@ -51,14 +51,13 @@ class Solution:
 
             #TODO: Write code below to return a dictionary with the solution to the prompt.
             dict = {}
-            tup = ()
-            for i in range(num_actions):
-                for j in range(num_actions):
-                    tup+=((j, i))
-            for i in range(num_actions**num_players):
-                dict[i] = tup[i]
-                dict[tup[i]] = i
 
+
+            for i in range(num_actions**num_players):
+                dict[i] = ()
+                for j in range(num_players):
+                    dict[i] += (i // (num_actions**j)%num_actions,)
+                dict[dict[i]] = i
             return dict
             pass
 
