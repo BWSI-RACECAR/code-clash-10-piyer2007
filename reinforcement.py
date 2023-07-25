@@ -52,15 +52,12 @@ class Solution:
             #TODO: Write code below to return a dictionary with the solution to the prompt.
             dict = {}
             tup = ()
-            vals = ()
-            for i in range(num_actions**num_players):
-                vals+=(i)
             for i in range(num_actions):
                 for j in range(num_actions):
                     tup+=((j, i))
             for i in range(num_action**num_players):
-                dict[vals[i]] = tup[i]
-                dict[tup[i]] = vals[i]
+                dict[i] = tup[i]
+                dict[tup[i]] = i
 
             return dict
             pass
